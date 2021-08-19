@@ -1,0 +1,24 @@
+# COCO 2017 dataset http://cocodataset.org - first 128 training images
+# Train command: python train.py --data coco128.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent
+#     /datasets/coco128
+#     /yolov5
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /home/abs/tevelopers/checkbot_ws/resources/vision/datasets/YOLOV5_cf36071a-8121-4ba9-9d81-c7b75ab4db52
+
+ # dataset root dir
+train: obj_train_data/images  # train images (relative to 'path') 128 images
+val: obj_valid_data/images  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+
+
+# Classes
+nc: 2  # number of classes
+names: [ '01_9423271_KT-Warnblinkschalter', '02_6993046_KT-Warnblinkschalter' ]  # class names
+
+
+# Download script/URL (optional)
+download: https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip

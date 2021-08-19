@@ -1,0 +1,8 @@
+# download: https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip
+names:
+- box
+nc: 1
+path: /home/abs/abs/yolov5/box
+test: null
+train: obj_train_data/images
+val: obj_valid_data/images
