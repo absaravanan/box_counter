@@ -1,24 +1,6 @@
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
-*.jpeg
-*.png
-*.bmp
-*.tif
-*.tiff
-*.heic
-*.JPG
-*.JPEG
-*.PNG
-*.BMP
-*.TIF
-*.TIFF
-*.HEIC
-*.mp4
-*.mov
-*.MOV
-*.avi
-*.data
-*.json
-*.cfg
+
+
 !cfg/yolov3*.cfg
 
 storage.googleapis.com
@@ -43,7 +25,6 @@ VOC/
 
 # Neural Network weights -----------------------------------------------------------------------------------------------
 *.weights
-*.pt
 *.onnx
 *.mlmodel
 *.torchscript

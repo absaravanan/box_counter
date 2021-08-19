@@ -2,7 +2,7 @@
 names:
 - box
 nc: 1
-path: /home/abs/abs/yolov5/box
+path: /content/box_counter/box
 test: null
 train: obj_train_data/images
 val: obj_valid_data/images

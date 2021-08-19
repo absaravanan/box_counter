@@ -14,6 +14,8 @@ from numpy.lib.npyio import save
 import torch
 import torch.backends.cudnn as cudnn
 from random import randint
+import matplotlib.pyplot as plt
+import matplotlib
 
 FILE = Path(__file__).absolute()
 sys.path.append(FILE.parents[0].as_posix())  # add yolov5/ to path
@@ -25,6 +27,7 @@ from utils.general import check_img_size, check_requirements, check_imshow, colo
 from utils.plots import colors, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
 
+matplotlib.use( 'tkagg' )
 
 @torch.no_grad()
 def detect(weights='yolov5s.pt',  # model.pt path(s)
@@ -153,11 +156,14 @@ def detect(weights='yolov5s.pt',  # model.pt path(s)
 
             # Print time (inference + NMS)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
+            plt.figure()
+            plt.imshow(im0)
+            plt.show()
 
             # Stream results
-            if view_img:
-                cv2.imshow(str(p), im0)
-                cv2.waitKey(0)  # 1 millisecond
+            # if view_img:
+            # cv2.imshow(str(p), im0)
+            # cv2.waitKey(0)  # 1 millisecond
 
             # Save results (image with detections)
             if save_img:
