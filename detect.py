@@ -163,6 +163,7 @@ def detect(weights='yolov5s.pt',  # model.pt path(s)
             # if view_img:
             # cv2.imshow(str(p), im0)
             # cv2.waitKey(0)  # 1 millisecond
+            save_path = "visionModules/objectDetection/yolov5/runs/detect/exp/box_counting.png"
 
             # Save results (image with detections)
             if save_img:
