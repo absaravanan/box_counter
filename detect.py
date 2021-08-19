@@ -27,7 +27,6 @@ from utils.general import check_img_size, check_requirements, check_imshow, colo
 from utils.plots import colors, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
 
-matplotlib.use( 'tkagg' )
 
 @torch.no_grad()
 def detect(weights='yolov5s.pt',  # model.pt path(s)
@@ -238,7 +237,6 @@ def run(**kwargs):
     for k, v in kwargs.items():
         setattr(opt, k, v)
     save_path, label, conf = main(opt)
-    save_path = save_path.replace("visionModules/objectDetection/yolov5/", "")
 
     print("--------------------")
     print("result image:")
@@ -250,6 +248,7 @@ def run(**kwargs):
     current_dir = os.path.dirname(os.path.realpath(__file__))
     predicted_image_path = os.path.join(current_dir, save_path)
     # print(label.split(" "))
+    return save_path
 
 
 
